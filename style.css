@@ -29,8 +29,6 @@ body {
     justify-content: space-between; 
     align-items: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
-    
-    /* STICKY NAVIGATION */
     position: sticky; 
     top: 0;
     z-index: 1000; 
@@ -95,7 +93,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.65); 
-    /* Frosted glass effect */
     backdrop-filter: blur(2px); 
     -webkit-backdrop-filter: blur(2px); 
     z-index: 1; 
@@ -133,8 +130,6 @@ body {
     font-weight: bold;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin-top: 15px;
-    
-    /* CTA Shadow for professional pop */
     box-shadow: 0 4px 12px var(--shadow-color);
 }
 
@@ -188,12 +183,78 @@ body {
 }
 
 .service-item h3 i {
-    /* Font Awesome Icon Styling */
     font-size: 1.5em; 
     margin-right: 15px;
     color: #2c3e50; 
 }
 
+/* --- 5.5. Why Choose Us Section --- */
+.why-choose-us {
+    background-color: white; 
+    /* Reduced top/bottom padding */
+    padding: 60px 40px; 
+}
+
+.why-choose-us h2 {
+    font-size: 2.2em;
+    color: var(--primary-blue);
+    /* Reduced margin below the heading */
+    margin-bottom: 30px; 
+}
+
+.advantage-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Reduced gap */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage-item {
+    flex-basis: calc(33.33% - 20px);
+    /* Reduced internal padding significantly */
+    padding: 20px; 
+    
+    /* Using a subtle left border for definition, similar to Core Values */
+    border: none; 
+    border-left: 3px solid var(--primary-blue); 
+    border-radius: 4px;
+    
+    /* Added background for visual separation from white background */
+    background-color: var(--light-gray); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; /* Aligned text left for a list-like appearance */
+}
+
+.advantage-item:hover {
+    transform: none; /* Removed the lift on hover */
+    box-shadow: 0 0 0 1px var(--primary-blue); /* Subtle border on hover */
+}
+
+.advantage-item i {
+    font-size: 2em; /* Slightly smaller icon */
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    display: block; 
+}
+
+.advantage-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.3em; /* Slightly smaller heading */
+    /* Removed border and extra padding */
+    padding-bottom: 0;
+    margin-bottom: 10px; 
+}
+
+.advantage-item p {
+    font-size: 0.95em; /* Smaller paragraph text */
+    color: #555;
+    margin-bottom: 0; /* Removed bottom margin */
+}
+
+/* --- 9. Media Queries (Responsiveness) --- */
+/* The existing mobile stack remains, so on small screens, these will still stack vertically. */
 /* --- 6. About Us Section (Detailed and Responsive) --- */
 .about-us {
     background-color: var(--light-gray);
@@ -201,7 +262,6 @@ body {
 }
 
 .about-us h2 {
-    /* Main heading for the section */
     color: #2c3e50;
     margin-bottom: 50px;
 }
@@ -219,7 +279,6 @@ body {
 }
 
 .mission-section h3 {
-    /* Sub-heading for Our Vision */
     color: var(--primary-blue);
     font-size: 1.8em;
     margin-top: 0;
@@ -236,7 +295,6 @@ body {
 }
 
 .values-section h3 {
-    /* Sub-heading for Core Values */
     color: #2c3e50;
     font-size: 1.8em;
     margin-top: 0;
@@ -321,7 +379,7 @@ body {
     resize: vertical; 
 }
 
-/* --- 8. Detailed Footer Styling (FIXED HEADINGS TO WHITE) --- */
+/* --- 8. Detailed Footer Styling --- */
 .detailed-footer {
     background-color: var(--dark-gray); 
     color: white;
@@ -355,7 +413,6 @@ body {
 }
 
 .footer-column h3 {
-    /* FIXED: Changed to white to contrast with dark-gray background */
     color: white; 
     margin-top: 0;
     font-size: 1.2em;
@@ -398,17 +455,19 @@ body {
     }
 }
 
-/* Full responsiveness for mobile screens */
-@media (max-width: 768px) {
-    /* Footer layout stacked */
-    .footer-content {
+/* Why Choose Us Mobile Stack */
+    .advantage-grid {
         flex-direction: column;
-    }
-    .footer-column {
-        flex-basis: 100%;
-        margin-bottom: 20px;
+        gap: 20px;
     }
     
+    .advantage-item {
+        flex-basis: 100%;
+    }
+
+
+/* Full responsiveness for mobile screens */
+@media (max-width: 768px) {
     /* Navbar stack and center */
     .navbar {
         flex-wrap: wrap;
@@ -444,5 +503,14 @@ body {
     
     .value-item {
         flex-basis: 100%;
+    }
+    
+    /* Footer layout stacked */
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-column {
+        flex-basis: 100%;
+        margin-bottom: 20px;
     }
 }
