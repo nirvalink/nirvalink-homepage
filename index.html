@@ -26,7 +26,9 @@
         <div class="hero-content">
             <h1>Build Your Digital Future. Starting Today.</h1>
             <p>Get a clear roadmap for your project. We handle the development and infrastructure so you can focus 100% on business growth.</p>
+            
             <a href="#contact" class="cta-button">Request a Free Consultation</a>
+            
         </div>
     </header>
     
@@ -66,17 +68,20 @@
         <div class="advantage-grid">
             
             <div class="advantage-item">
-                <i class="fa-solid fa-tachometer-alt"></i> <h3>Rapid, Measurable Progress</h3>
+                <i class="fa-solid fa-tachometer-alt"></i>
+                <h3>Rapid, Measurable Progress</h3>
                 <p>We prioritize speed and accountability. Get regular, measurable updates and see a functional prototype within the first few sprints.</p>
             </div>
             
             <div class="advantage-item">
-                <i class="fa-solid fa-dollar-sign"></i> <h3>Transparent Fixed Pricing</h3>
+                <i class="fa-solid fa-dollar-sign"></i>
+                <h3>Transparent Fixed Pricing</h3>
                 <p>Know the total cost upfront. Our detailed, fixed-scope proposals eliminate budgeting uncertainty and hidden fees.</p>
             </div>
             
             <div class="advantage-item">
-                <i class="fa-solid fa-users"></i> <h3>Direct, Dedicated Team</h3>
+                <i class="fa-solid fa-users"></i>
+                <h3>Direct, Dedicated Team</h3>
                 <p>Work directly with the experts. You get a single, dedicated team leader for efficient communication and project clarity.</p>
             </div>
 
@@ -127,6 +132,8 @@
             
             <form id="contact-form" action="https://formspree.io/f/mdkwyzwd" method="POST" class="contact-form">
                 
+                <input type="hidden" name="_next" value="nirvalink-website.vercel.app/success.html" />
+                
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
@@ -139,7 +146,7 @@
 
                 <div class="form-group">
                     <label for="service">Interested Service</label>
-                    <select id="service" name="service" name="_subject">
+                    <select id="service" name="service">
                         <option value="general">General Inquiry</option>
                         <option value="software">Software Development</option>
                         <option value="web">Web & Application Design</option>
