@@ -124,7 +124,8 @@
         <p>Contact us today to discuss your project and learn how Nirvalink can help you achieve your goals.</p>
         
         <div class="contact-form-container">
-            <form name="contact" method="POST" data-netlify="true" class="contact-form">
+            
+            <form id="contact-form" action="https://formspree.io/f/mdkwyzwd" method="POST" class="contact-form">
                 
                 <div class="form-group">
                     <label for="name">Your Name</label>
@@ -133,12 +134,12 @@
                 
                 <div class="form-group">
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" name="_replyto" required>
                 </div>
 
                 <div class="form-group">
                     <label for="service">Interested Service</label>
-                    <select id="service" name="service">
+                    <select id="service" name="service" name="_subject">
                         <option value="general">General Inquiry</option>
                         <option value="software">Software Development</option>
                         <option value="web">Web & Application Design</option>
