@@ -12,12 +12,25 @@ Nirvalink - Consolidated Style Sheet (style.css)
     --shadow-color: rgba(0, 77, 153, 0.25);
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 body {
+    scroll-behavior: smooth; /* NEW */
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: white; 
     color: var(--dark-gray); 
     line-height: 1.6;
+    
 }
 
 /* --- 2. Navigation Bar (Sticky and Professional) --- */
@@ -78,6 +91,8 @@ body {
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* NEW */
+    background-size: cover;
     padding: 100px 40px;
     text-align: center;
     border-bottom: 5px solid var(--primary-blue); 
@@ -134,8 +149,10 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #003366; 
-    box-shadow: 0 6px 15px rgba(0, 77, 153, 0.4);
+    background-color: #ffffff;
+    transform: translateY(-3px); /* Slightly more lift */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* NEW: Add Shadow */
+    color: var(--text-dark);
 }
 
 /* --- 4. General Content Sections --- */
@@ -468,6 +485,10 @@ body {
 
 /* Full responsiveness for mobile screens */
 @media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
     /* Navbar stack and center */
     .navbar {
         flex-wrap: wrap;
